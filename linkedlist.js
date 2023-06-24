@@ -119,5 +119,28 @@ class LinkedList {
         newNode.next = temp;
         this.size += 1;
     }
+
+    removeAt(index) {
+        if(index >= this.size || index < 0) {
+            return;
+        }
+        
+        if(index === this.size - 1) {
+            this.pop();
+            return;
+        }
+        this.size -= 1;
+        if(index === 0) {
+            this.head = this.head.next;
+            return;
+        }
+        let node = this.head;
+        let i = 0;
+        while(node != null && i < index - 1) {
+            node = node.next;
+            i++;
+        }
+        node.next = node.next.next;
+    }
 }
 export default LinkedList;
