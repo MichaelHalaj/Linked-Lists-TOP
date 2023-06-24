@@ -96,5 +96,28 @@ class LinkedList {
     size() {
         return this.size;
     }
+
+    insertAt(value, index) {
+        if(index >= this.size) {
+            this.append(value);
+            return;
+        }
+        if(index <= 0) {
+            this.prepend(value);
+            return;
+        }
+        let newNode = new Node(value);
+        
+        let node = this.head;
+        let i = 0;
+        while(node != null && i < index - 1 ) {
+            node = node.next;
+            i++;
+        }
+        let temp = node.next;
+        node.next = newNode;
+        newNode.next = temp;
+        this.size += 1;
+    }
 }
 export default LinkedList;

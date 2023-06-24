@@ -45,3 +45,17 @@ for( let i = 0; i < 100; i++) {
     ll.append(i);
 }
 console.log(ll.toString());
+
+console.log('\n------------\n');
+let ll2 = new LinkedList();
+ll2.append(1);
+ll2.append(2);
+console.log(ll2.toString());
+ll2.insertAt(4, 0);
+console.log(ll2.toString());
+ll2.insertAt(5, 1);
+console.log(ll2.toString());
+ll2.insertAt(34, 3);
+console.log(ll2.toString());
+ll2.insertAt(54, 6);
+console.log(ll2.toString());
