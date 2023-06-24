@@ -48,6 +48,9 @@ console.log(ll.toString());
 
 console.log('\n------------\n');
 let ll2 = new LinkedList();
+ll2.removeAt(0);
+console.log(ll2.toString());
+console.log('Size: ' + ll2.size + '\n');
 ll2.append(1);
 ll2.append(2);
 console.log(ll2.toString());
