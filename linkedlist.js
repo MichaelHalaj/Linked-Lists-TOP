@@ -45,14 +45,16 @@ class LinkedList {
 
     pop() {
         let node = this.head;
-        if(node === null) return;
-
         while(node != null && node.next != this.tail) {
             node = node.next;
         }
-        node.next = null;
+        if (node != null) {
+            node.next = null;
+        } else {
+            this.head = null;
+        }
         this.tail = node;
-        this.size -= 1;
+        this.size = this.size === 0 ? 0 : this.size - 1;
     }
 
     contains(value) {
